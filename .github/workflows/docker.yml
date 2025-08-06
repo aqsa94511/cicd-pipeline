@@ -2,11 +2,13 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [ office-main ]
+    branches:
+      - office-main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,16 +19,76 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push
+      - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: aqsa945/hello-api:latest
 
-~                                                                                                                                                                                             
-~                                                                                                                                                                                             
-~                                                                                                                                                                                             
-~                                                                                                                                                                                             
-~                                                                                                                                                                                             
-~                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
